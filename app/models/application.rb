@@ -7,5 +7,4 @@ class Application < ApplicationRecord
   validates_presence_of :company
   validates_presence_of :url
   validates_presence_of :date_applied
-  validates_presence_of :user
 end

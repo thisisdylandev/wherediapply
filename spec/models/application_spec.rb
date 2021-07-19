@@ -7,7 +7,7 @@ RSpec.describe Application, type: :model do
   end
   it "should belong to a User" do
     new_application = FactoryBot.build(:application)
-    expect(new_application).to validate_presence_of(:user)
+    expect(new_application).to belong_to(:user)
   end
   it "is not valid without a company" do
     no_company = FactoryBot.build(:application)
