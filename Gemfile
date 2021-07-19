@@ -53,3 +53,4 @@ gem "rspec-rails", group: [:development, :test]
 gem "factory_bot_rails", group: [:development, :test]
 gem "faker", group: [:development, :test]
 gem "standard", group: [:development, :test]
+gem "hotwire-rails", "~> 0.1.3"
