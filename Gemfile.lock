@@ -223,6 +223,8 @@ GEM
       rubocop-performance (= 1.11.4)
     stimulus-rails (0.2.4)
       rails (>= 6.0.0)
+    tailwindcss-rails (0.3.3)
+      rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
     turbo-rails (0.5.12)
@@ -271,6 +273,7 @@ DEPENDENCIES
   shoulda-matchers (~> 5.0)
   spring
   standard
+  tailwindcss-rails (~> 0.3.3)
   tzinfo-data
   web-console (>= 4.1.0)
   webpacker (~> 5.0)
