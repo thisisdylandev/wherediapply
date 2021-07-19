@@ -1,0 +1,10 @@
+pre-push:
+  parallel: true
+  commands:
+    test:
+      run: rake test
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      run: rake lint
