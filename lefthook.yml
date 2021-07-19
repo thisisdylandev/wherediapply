@@ -7,4 +7,4 @@ pre-commit:
   parallel: true
   commands:
     lint:
-      run: rake lint:fix
+      run: rake fix

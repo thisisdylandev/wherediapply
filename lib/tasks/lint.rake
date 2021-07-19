@@ -6,6 +6,6 @@ task :lint do
 end
 
 desc "Run linter with autofix"
-task :"lint:fix" do
+task :fix do
   Rake::Task["standard:fix"].execute
 end

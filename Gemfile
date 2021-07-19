@@ -30,6 +30,10 @@ gem "bootsnap", ">= 1.4.4", require: false
 group :development, :test do
   gem "brakeman"
   gem "lefthook"
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem "standard"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -52,10 +56,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "rspec-rails", group: [:development, :test]
-gem "factory_bot_rails", group: [:development, :test]
-gem "faker", group: [:development, :test]
-gem "standard", group: [:development, :test]
 gem "hotwire-rails", "~> 0.1.3"
 
 gem "devise", "~> 4.8"

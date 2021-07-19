@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :applications
   devise_for :users, path: "",
     path_names: {sign_in: "login", password: "forgot", confirmation: "confirm",
-                 unlock: "unblock", sign_up: "register", sign_out: "signout"}
+                 sign_up: "register", sign_out: "signout"}
 
   devise_scope :user do
     root "devise/sessions#new"

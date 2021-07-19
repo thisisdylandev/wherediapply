@@ -1,3 +1,4 @@
+[![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
 
 # Where'd I Apply?
 
@@ -28,13 +29,19 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd wherediapply
 ```
 
 Install dependencies
 
 ```bash
   bundle install
+```
+
+Create database
+
+```bash
+  bin/rails db:create
 ```
 
 Run migrations
@@ -49,12 +56,31 @@ Start the server
   bin/rails s
 ```
 
-  
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  bundle exec rake test
+```
+
+To run a vulnerability scan, run the following command
+
+```bash
+  bundle exec rake brakeman
+```
+
+To run tests, vulnerability scans, and linter, run the following command
+
+```bash
+  bundle exec rake check
+```
+
 ## Tech Stack
 
 **Client:** ERB & Hotwire
 
-**Server:** Ruby 3.0, Rails 6.1
+**Server:** Ruby 3.0.1, Rails 6.1
 
 **Database:** Postgresql, Redis
 
