@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @application.user_id %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @application.company %>
+</p>
+
+<p>
+  <strong>Resume:</strong>
+  <%= link_to @application.resume.filename, @application.resume if @application.resume.attached? %>
+</p>
+
+<p>
+  <strong>Cover letter:</strong>
+  <%= link_to @application.cover_letter.filename, @application.cover_letter if @application.cover_letter.attached? %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @application.url %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @application.notes %>
+</p>
+
+<p>
+  <strong>Date applied:</strong>
+  <%= @application.date_applied %>
+</p>
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>
