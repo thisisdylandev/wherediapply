@@ -9,4 +9,5 @@ class User < ApplicationRecord
 
   has_many :applications
   has_many :contacts
+  has_many :interview_notes
 end

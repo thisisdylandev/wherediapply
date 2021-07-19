@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_161958) do
+ActiveRecord::Schema.define(version: 2021_07_19_164021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,6 +86,18 @@ ActiveRecord::Schema.define(version: 2021_07_19_161958) do
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
+  create_table "interview_notes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "application_id", null: false
+    t.bigint "contact_id", null: false
+    t.datetime "date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["application_id"], name: "index_interview_notes_on_application_id"
+    t.index ["contact_id"], name: "index_interview_notes_on_contact_id"
+    t.index ["user_id"], name: "index_interview_notes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -103,4 +115,7 @@ ActiveRecord::Schema.define(version: 2021_07_19_161958) do
   add_foreign_key "applications", "users"
   add_foreign_key "contacts", "applications"
   add_foreign_key "contacts", "users"
+  add_foreign_key "interview_notes", "applications"
+  add_foreign_key "interview_notes", "contacts"
+  add_foreign_key "interview_notes", "users"
 end

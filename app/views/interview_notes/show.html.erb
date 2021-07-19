@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @interview_note.User %>
+</p>
+
+<p>
+  <strong>Application:</strong>
+  <%= @interview_note.Application %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @interview_note.Contact_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @interview_note.date %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @interview_note.notes %>
+</p>
+
+<%= link_to 'Edit', edit_interview_note_path(@interview_note) %> |
+<%= link_to 'Back', interview_notes_path %>

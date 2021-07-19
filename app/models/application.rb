@@ -7,4 +7,7 @@ class Application < ApplicationRecord
   validates_presence_of :company
   validates_presence_of :url
   validates_presence_of :date_applied
+
+  has_many :contacts
+  has_many :interview_notes
 end
